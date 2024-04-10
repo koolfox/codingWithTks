@@ -1,0 +1,32 @@
+Create an express app and build API routes
+ 
+- APIs should fetch data from a url which is "http://cran.r-project.org/src/contrib/PACKAGES.gz"
+which is .gz file
+ 
+- make (two) api route in node js (express/nestjs/framework) which can do the following things
+ 
+0. create api routes like "/api/packages"
+1. download file from this url http://cran.r-project.org/src/contrib/PACKAGES.gz
+2. extract .gz and save file on server file system
+3. read the extracted file and return data in response
+ 
+- make second api route in node js taking package name as query param
+0. create api routes like "/api/package?name=packageName"
+1. Now we have downloaded file content on server from above api call
+3. search for the package name and return data from the file for the package "packageName"
+ 
+Note - sample content of the file after extract
+ 
+```
+Package: A3
+Version: 1.0.0
+Depends: R (>= 2.15.0), xtable, pbapply
+Suggests: randomForest, e1071
+License: GPL (>= 2)
+MD5sum: 027ebdd8affce8f0effaecfcd5f5ade2
+NeedsCompilation: no
+ 
+has context menu
+
+
+has context menu

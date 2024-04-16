@@ -23,7 +23,7 @@ export class PackagesController {
       return res.status(400).json({ message: 'Package name is required.' });
     }
     try {
-      const packageDetails = await this.packagesService.findPackageByName(name);
+      const packageDetails = await this.packagesService.findPackageByName2(name);
       if (packageDetails.startsWith('Package not found')) {
         res.status(404).json({ message: packageDetails });
       } else {
